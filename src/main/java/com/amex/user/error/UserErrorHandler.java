@@ -10,7 +10,7 @@ public class UserErrorHandler implements Handler<RoutingContext> {
   @Inject
   public UserErrorHandler() {}
 
-  // TODO log error messages and send new ones where applicable
+  // TODO log error messages and return error messages from Exceptions
 
   @Override
   public void handle(RoutingContext ctx) {

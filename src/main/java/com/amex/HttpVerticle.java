@@ -21,7 +21,6 @@ public class HttpVerticle extends AbstractVerticle {
   public static final String USERS_URI_V1 = V1 + USERS;
   public static final String USERS_URI_WITH_ID_V1 = V1 + USERS + ID;
 
-  private Router router;
   private UserErrorHandler errorHandler;
   private CreateUserHandler createUserHandler;
   private GetUserHandler getUserHandler;

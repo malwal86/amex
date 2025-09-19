@@ -1,7 +1,7 @@
 # User Service (Java · Vert.x · Gradle)
 
-Google Java Style. In-memory, thread-safe CRUD. Vert.x Web API. Dagger DI. Tests. Docker.  
-**Notes:** no logging; no external config files (constants only); no Lombok; user IDs are **UUIDs**.
+Google Java Style. In-memory, thread-safe CRUD. Vert.x Web API. Dagger compile time DI. Tests. Docker.  
+**Notes:** no authentication; no logging & data sanitization; no external config files (constants only); no Lombok; user IDs are **UUIDs**.
 
 ## Overview
 A simple REST API that manages `User` resources (create, read, update email, delete).  
@@ -17,15 +17,12 @@ Input is validated; errors are mapped to meaningful HTTP responses.
 - **Validator** – small utility for basic validations.
 
 > For simplicity, there is **no worker verticle** for `UserService`. Blocking code is executed via Vert.x `blockingHandler(...)` on worker threads rather than using the event-bus 
-> communicate back and forth with the HttpVerticle.
-
-## Testing
-A single **integration test** covers the HTTP surface. There are no external components, but it’s not a strict *unit* test (no mocks), to keep scope focused on the end-to-end behavior.
+> to communicate back and forth with the HttpVerticle.
 
 ## Build & Test
 
 ### Testing
-A single integration test covers the HTTP surface. There are no external components, but it’s not a strict 
+A single integration test covers the API. There are no external components, but it’s not a strict 
 unit test (no mocks), to keep scope focused on the end-to-end behavior.
 
 ```bash

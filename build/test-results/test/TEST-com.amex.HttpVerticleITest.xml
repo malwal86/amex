@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.amex.HttpVerticleITest" tests="11" skipped="0" failures="0" errors="0" timestamp="2025-09-19T23:09:24" hostname="malcolms-MacBook-Pro.local" time="0.303">
+<testsuite name="com.amex.HttpVerticleITest" tests="11" skipped="0" failures="0" errors="0" timestamp="2025-09-20T00:14:04" hostname="malcolms-MacBook-Pro.local" time="0.292">
   <properties/>
-  <testcase name="testCreateUserThatAlreadyExists(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.241"/>
-  <testcase name="testDeleteUserSuccessfully(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.015"/>
+  <testcase name="testCreateUserThatAlreadyExists(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.233"/>
+  <testcase name="testDeleteUserSuccessfully(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.014"/>
   <testcase name="testUpdateUnknownUserEmail(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.003"/>
   <testcase name="testCreateUserWithInvalidEmailFormat(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.003"/>
   <testcase name="testDeleteUnknownUser(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.002"/>
-  <testcase name="testCreateUserWithoutName(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.003"/>
-  <testcase name="testUpdateUserEmailSuccessfully(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.005"/>
-  <testcase name="testCreateUserWithoutEmail(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.002"/>
-  <testcase name="testCreateUserWithEmptyName(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.003"/>
-  <testcase name="testCreateUserSuccessfully(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.016"/>
-  <testcase name="testUpdateUserEmailWithInvalidId(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.004"/>
+  <testcase name="testCreateUserWithoutName(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.002"/>
+  <testcase name="testUpdateUserEmailSuccessfully(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.004"/>
+  <testcase name="testCreateUserWithoutEmail(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.003"/>
+  <testcase name="testCreateUserWithEmptyName(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.004"/>
+  <testcase name="testCreateUserSuccessfully(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.011"/>
+  <testcase name="testUpdateUserEmailWithInvalidId(Vertx, VertxTestContext)" classname="com.amex.HttpVerticleITest" time="0.007"/>
   <system-out><![CDATA[HTTP server started on port 8888
 ]]></system-out>
-  <system-err><![CDATA[Sep 19, 2025 7:09:24 PM io.netty.resolver.dns.DnsServerAddressStreamProviders <clinit>
+  <system-err><![CDATA[Sep 19, 2025 8:14:04 PM io.netty.resolver.dns.DnsServerAddressStreamProviders <clinit>
 WARNING: Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
 ]]></system-err>
 </testsuite>
