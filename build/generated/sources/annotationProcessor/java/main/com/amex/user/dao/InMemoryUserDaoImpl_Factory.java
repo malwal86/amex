@@ -1,0 +1,40 @@
+package com.amex.user.dao;
+
+import dagger.internal.DaggerGenerated;
+import dagger.internal.Factory;
+import dagger.internal.QualifierMetadata;
+import dagger.internal.ScopeMetadata;
+import javax.annotation.processing.Generated;
+
+@ScopeMetadata
+@QualifierMetadata
+@DaggerGenerated
+@Generated(
+    value = "dagger.internal.codegen.ComponentProcessor",
+    comments = "https://dagger.dev"
+)
+@SuppressWarnings({
+    "unchecked",
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava",
+    "cast"
+})
+public final class InMemoryUserDaoImpl_Factory implements Factory<InMemoryUserDaoImpl> {
+  @Override
+  public InMemoryUserDaoImpl get() {
+    return newInstance();
+  }
+
+  public static InMemoryUserDaoImpl_Factory create() {
+    return InstanceHolder.INSTANCE;
+  }
+
+  public static InMemoryUserDaoImpl newInstance() {
+    return new InMemoryUserDaoImpl();
+  }
+
+  private static final class InstanceHolder {
+    private static final InMemoryUserDaoImpl_Factory INSTANCE = new InMemoryUserDaoImpl_Factory();
+  }
+}

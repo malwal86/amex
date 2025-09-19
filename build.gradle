@@ -1,0 +1,55 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.amex'
+version = '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform('io.vertx:vertx-dependencies:5.0.4')
+
+    implementation 'io.vertx:vertx-launcher-application'
+    implementation 'io.vertx:vertx-web'
+    implementation 'io.vertx:vertx-web-validation'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.20.0'
+    implementation 'com.google.dagger:dagger:2.51.1'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.51.1'
+
+    testImplementation 'io.vertx:vertx-junit5'
+    testImplementation 'io.vertx:vertx-web-client'
+}
+
+application {
+    mainClass = 'io.vertx.launcher.application.VertxApplication'
+}
+
+tasks.named('run', JavaExec) {
+    args 'com.amex.ApplicationVerticle'
+}
+
+tasks.withType(Jar).configureEach {
+    manifest {
+        attributes(
+                "Main-Class": "io.vertx.launcher.application.VertxApplication",
+                "Main-Verticle": "com.amex.ApplicationVerticle"
+        )
+    }
+}
+
+['shadowJar', 'shadowDistZip', 'shadowDistTar'].each { t ->
+    tasks.matching { it.name == t }.configureEach { enabled = false }
+}
+
+test {
+    useJUnitPlatform()
+}
